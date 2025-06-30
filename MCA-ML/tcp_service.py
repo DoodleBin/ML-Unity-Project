@@ -52,7 +52,7 @@ def detect_objects(image, model):
     results = model(image, verbose=False)[0]  # Get first result (single image)
 
     boxes = []
-    for idx, det in enumerate(results.boxes):
+    for det in results.boxes:
 
         # Extract bounding box info
         class_id = float(det.cls)
@@ -68,6 +68,7 @@ def detect_objects(image, model):
             "xmax": xyxy[2],
             "ymax": xyxy[3]
         })
+        print("this ran")
 
     return boxes
 
@@ -184,8 +185,15 @@ def verify_tcp_messaging(server_socket):
 """
 
 if __name__ == '__main__':
-    # Load the TensorFlow model
+    # Load the
     load_model()
+
+    img_path = 'C:/Users/alexah1/Documents/GitHub/ML-Unity-Project/MCA-ML/data/zoo.jpg'
+    # img = resize(img_path)
+    img = cv2.imread(img_path, 3)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    boxesJson = detect_objects(img, model)
+
 
     # Initialize the TCP server
     server_socket = initialize_server()

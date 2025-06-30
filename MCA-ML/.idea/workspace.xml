@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435636d2-b312-4894-b1ad-028b28138499" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcp_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tcp_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolo_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +36,8 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.img_preprocessor.executor": "Run",
-    "Python.tcp_service.executor": "Run",
-    "Python.yolo_test.executor": "Run",
+    "Python.tcp_service.executor": "Debug",
+    "Python.yolo_test.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -57,7 +59,7 @@
       <recent name="C:\Users\alexah1\Desktop\MCA-ML\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.yolo_test">
+  <component name="RunManager" selected="Python.tcp_service">
     <configuration name="tcp_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MCA-ML" />
       <option name="ENV_FILES" value="" />
@@ -129,16 +131,32 @@
       <workItem from="1750880270591" duration="8103000" />
       <workItem from="1751033036031" duration="16098000" />
       <workItem from="1751292636181" duration="315000" />
-      <workItem from="1751293379584" duration="1121000" />
+      <workItem from="1751293379584" duration="4216000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/yolo_test.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tcp_service.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MCA_ML$yolo_test.coverage" NAME="yolo_test Coverage Results" MODIFIED="1751293863930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\alexah1\Desktop\MCA-ML" />
-    <SUITE FILE_PATH="coverage/MCA_ML$tcp_service.coverage" NAME="tcp_service Coverage Results" MODIFIED="1751293527909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MCA_ML$yolo_test.coverage" NAME="yolo_test Coverage Results" MODIFIED="1751296465674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\alexah1\Desktop\MCA-ML" />
+    <SUITE FILE_PATH="coverage/MCA_ML$tcp_service.coverage" NAME="tcp_service Coverage Results" MODIFIED="1751297439978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MCA_ML$img_preprocessor.coverage" NAME="img_preprocessor Coverage Results" MODIFIED="1751293546714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

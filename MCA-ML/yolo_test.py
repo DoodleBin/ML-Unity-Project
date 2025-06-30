@@ -14,7 +14,7 @@ img = resize(img_path)
 model = YOLO("yolo11n.pt")
 
 # Perform object detection on an image
-boxesJson = detect_objects(img_path, model)  # Predict on an image
+boxesJson = detect_objects(img, model)  # Predict on an image
 with open("boundingBoxInfo.json", 'w', encoding="utf-8") as f:
     json.dump(boxesJson, f, indent=2)
 
