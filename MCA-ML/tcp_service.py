@@ -46,10 +46,10 @@ def process_image(img_bytes):
         raise
 
 
-def detect_objects(image, model):
+def detect_objects(image_numpy_arr, model):
     """Run YOLOv8 object detection and return bounding box info."""
     # Run inference
-    results = model(image, verbose=False)[0]  # Get first result (single image)
+    results = model(source=[image_numpy_arr], verbose=False)[0]  # Get first result (single image)
 
     boxes = []
     for det in results.boxes:
@@ -61,7 +61,7 @@ def detect_objects(image, model):
         xyxy = det.xyxy[0].tolist()  # [xmin, ymin, xmax, ymax]
 
         boxes.append({
-            "class": class_id,
+            "class": class_name,
             "confidence": confidence,
             "xmin": xyxy[0],
             "ymin": xyxy[1],
@@ -118,8 +118,8 @@ def execute_predictive_control(server_socket):
                     print(f"Received image of {len(img_data)} bytes from {address}")
 
                     converted_img = string_to_image(img_data)
-                    resized_img = resize(converted_img)
-                    boxes = detect_objects(resized_img, model)
+                    #resized_img = preprocess(converted_img)
+                    boxes = detect_objects(converted_img, model)
 
                     # Send control response
                     control_message = json.dumps(boxes).encode('utf-8')
@@ -188,11 +188,11 @@ if __name__ == '__main__':
     # Load the
     load_model()
 
-    img_path = 'C:/Users/alexah1/Documents/GitHub/ML-Unity-Project/MCA-ML/data/zoo.jpg'
+    #img_path = 'C:/Users/nsp13737/Desktop/ML-Unity-Project/MCA-ML/data/zoo.jpg'
     # img = resize(img_path)
-    img = cv2.imread(img_path, 3)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    boxesJson = detect_objects(img, model)
+   # img = cv2.imread(img_path, 3)
+    #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    #boxesJson = detect_objects(img, model)
 
 
     # Initialize the TCP server

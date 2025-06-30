@@ -1,5 +1,4 @@
 from ultralytics import YOLO
-from img_preprocessor import resize, string_to_image
 from tcp_service import detect_objects
 import json
 
